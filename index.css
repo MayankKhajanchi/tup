@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Alex+Brush');
+.cover-img{
+	background-size: cover;
+	background-position: center; 
+}
+.map{
+  height: 60vh;
+  background: white;
+  position: fixed;
+  width: 100vw;
+  color: white;
+}
+.restaurants{
+  background: white;
+  position: relative;
+  top: 60vh;
+  z-index: 21;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 -4px 6px -6px #333;
+  border-top: 1px solid #EFEFF4;
+}
+.fa-minus{
+	color: #dadce0;
+	font-size: 30px;
+	margin-top: -5px;
+}
+.typo{
+	font-family: 'Alex Brush', cursive;
+	font-weight: 200;
+	color:white;
+	font-size:80px;
+	height: 100%
+}
+.back{
+	z-index: 20;
+	position: fixed;
+	top: 1vh;
+	left: 1vw;
+	padding: 10px;
+	border-radius: 30px;
+}
+.back a{
+	color: white;
+}
+.fa-star:nth-child(5){
+	color: grey;
+}
+
+.status{
+	color: green;
+}
+
+.see-more{
+	cursor: pointer;
+}
+
+.restaurant-content{
+	height: 30vh;
+}
+
+.big{
+	height: 410px;
+	/*background: orange;*/
+}
+.small{
+	height: 200px;
+	background: black;
+	color: white;
+}
+.big, .small, .typo{
+	 background-image: url('product_images/_DSC5959.jpg');
+	 background-size: cover;
+	 background-position: 50% 25%;
+	 /*footwear*/
+	 /*background-position: 50% 60%;*/ 
+	 border-radius: 5px;
+}
+.modal-body{
+	background-size: cover;
+	background-position: 50% 25%;
+}
+.modal-content{
+	width:80vw;
+	height: 80vh;
+}
+
+@media only screen and (max-width: 600px){
+	.big{
+		margin-bottom: 10px;
+	}
+	.typo{
+		font-size: 60px !important;
+	}
+}
