@@ -18,7 +18,8 @@ body {
 	--color-content-title: #c35340;
 	--color-indicator: #1b1b1b;
 	color: var(--color-text);
-	background-color: var(--color-bg);
+	/*background-color: var(--color-bg);*/
+	background-color: white;
 	font-family: ff-more-web-pro, serif;
 	margin: 0;
 	-webkit-font-smoothing: antialiased;
@@ -201,10 +202,12 @@ main {
 .img-outer {
 	--imgheight: 450px;
 	height: var(--imgheight);
-	width: calc(var(--imgheight) * 0.7);
+	width: calc(var(--imgheight) * 1);
 	overflow: hidden;
 	position: relative;
 	flex: none;
+	border-radius: 10px;
+	margin: 0 10px 0 10px;
 }
 
 .img-outer--size-s {
@@ -220,11 +223,11 @@ main {
 }
 
 .img-outer--size-xl {
-	--imgheight: 420px;
+	--imgheight: 480px;
 }
 
 .img-inner {
-	width: calc(100% + 40px);
+	width: calc(100% + 100px);
 	height: calc(100% + 40px);
 	left: -20px;
 	top: -20px;

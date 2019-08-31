@@ -1,18 +1,13 @@
-/**
-* demo.js
-* http://www.codrops.com
-*
-* Licensed under the MIT license.
-* http://www.opensource.org/licenses/mit-license.php
-* 
-* Copyright 2019, Codrops
-* http://www.codrops.com
-*/
-
-$('.strip').click(function(event) {
+$('.strip-outer').click(function(event) {
     // var status = $(this).attr('id');
     // console.log(status);
-    console.log(hey)
+    console.log(event);
+    // console.log('hey')
+    // console.log($('.center').offset().left);
+    // console.log(screen.width);
+    if($('.center').offset().left < 300){
+        console.log('hey')
+    }
 });
 
 {
