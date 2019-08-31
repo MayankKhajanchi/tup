@@ -18,7 +18,6 @@ body {
 	--color-content-title: #c35340;
 	--color-indicator: #1b1b1b;
 	color: var(--color-text);
-	/*background-color: var(--color-bg);*/
 	background-color: white;
 	font-family: ff-more-web-pro, serif;
 	margin: 0;

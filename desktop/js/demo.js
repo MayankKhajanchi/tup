@@ -8,7 +8,13 @@ $('.strip-outer').click(function(event) {
     if($('.center').offset().left < 300){
         console.log('hey')
     }
+    $('.strip-cover').hide();
+    
+    
 });
+// $( document ).ready(function(){
+//     $('.strip-cover').css("display","none")
+// }
 
 {
     const body = document.body;
