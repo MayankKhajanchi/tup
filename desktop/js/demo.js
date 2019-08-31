@@ -5,9 +5,6 @@ $('.strip-outer').click(function(event) {
     // console.log('hey')
     // console.log($('.center').offset().left);
     // console.log(screen.width);
-    if($('.center').offset().left < 300){
-        console.log('hey')
-    }
     $('.strip-cover').hide();
     
     
