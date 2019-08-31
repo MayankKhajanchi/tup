@@ -201,7 +201,7 @@ main {
 .img-outer {
 	--imgheight: 450px;
 	height: var(--imgheight);
-	width: calc(var(--imgheight) * 1);
+	width: calc(var(--imgheight) * 1.3);
 	overflow: hidden;
 	position: relative;
 	flex: none;
@@ -231,7 +231,7 @@ main {
 	left: -20px;
 	top: -20px;
 	background-size: cover;
-	background-position: 50% 50%;
+	background-position: 0% 0%;
 	position: absolute;
 }
 
@@ -359,12 +359,12 @@ main {
 
 .img-outer--content {
 	height: 100%;
-	width: auto;
+	width: 140%;
 	grid-area: content-img;
 }
 
 .img-inner--content {
-	background-position: 50% 35%;
+	background-position: 0% 10%;
 }
 
 .content__item-title {
