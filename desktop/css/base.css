@@ -231,7 +231,7 @@ main {
 	left: -20px;
 	top: -20px;
 	background-size: cover;
-	background-position: 0% 0%;
+	background-position: 50% 0%;
 	position: absolute;
 }
 
@@ -255,6 +255,7 @@ main {
 	cursor: pointer;
 	display: block;
 	position: relative;
+	color: black;
 }
 
 .strip__item-link::before {
@@ -364,7 +365,7 @@ main {
 }
 
 .img-inner--content {
-	background-position: 0% 10%;
+	background-position: 70% 70%;
 }
 
 .content__item-title {

@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<!-- let maxnum = 5;
+
+	const bgImageContainer = document.querySelector(".bg-image-container");
+	
+	for (let i = 1; i < maxnum; i++) {
+		bgImageContainer.innerHTML += `
+			<div style="background: url('images/${i}.jpg')"></div>
+		`;
+	}
+	
+	const numberContainer = document.querySelector(".number-container");
+	
+	for (let i = 1; i < maxnum; i += 3) {
+		numberContainer.innerHTML = `
+			<div>
+					<div>${i}</div>
+					<div>${i+1}</div>
+					<div>${i+2}</div>
+				</div>
+		`;
+	} -->
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>The Urban Purush</title>
+	<meta name="description"
+		content="A draggable image strip layout with a content preview powered by Draggabilly and TweenMax." />
+	<meta name="keywords"
+		content="draggable, images, horizontal, layout, flexbox, grid, css, tweenmax, draggabilly, web design" />
+	<meta name="author" content="Codrops" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="https://use.typekit.net/ugp0unb.css">
+	<link rel="stylesheet" type="text/css" href="css/base.css" />
+	<script>document.documentElement.className = "js"; var supportsCssVars = function () { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e }; supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+</head>
+
+<body class="loading">
+	<main>
+		<div class="frame">
+			<h3 class="frame__subtitle">The Urban Purush</h3>
+			<div class="frame__indicator"></div>
+		</div>
+		<div class="strip-outer">
+			<div class="strip-inner">
+				<div class="draggable"></div>
+				<div class="strip">
+					<div class="strip__item">
+						<div class="img-outer img-outer--size-xl">
+							<div class="img-inner" style="background-image:url('./../optimised/tie/1.jpg');"></div>
+						</div>
+						<span class="strip__item-number"><a class="strip__item-link"><span>Expand</span></a>
+					</div>
+					<div class="strip__item">
+						<div class="img-outer img-outer--size-xl">
+							<div class="img-inner" style="background-image:url('./../optimised/tie/2.jpg');"></div>
+						</div>
+						<span class="strip__item-number"><a class="strip__item-link"><span>Expand</span></a>
+					</div>
+					<div class="strip__item">
+						<div class="img-outer img-outer--size-xl">
+							<div class="img-inner" style="background-image:url('./../optimised/tie/3.jpg');"></div>
+						</div>
+						<span class="strip__item-number"><a class="strip__item-link"><span>Expand</span></a>
+					</div>
+					<div class="strip__item">
+						<div class="img-outer img-outer--size-xl">
+							<div class="img-inner" style="background-image:url('./../optimised/tie/4.jpg');"></div>
+						</div>
+						<span class="strip__item-number"><a class="strip__item-link"><span>Expand</span></a>
+					</div>
+					<div class="strip__item">
+						<div class="img-outer img-outer--size-xl">
+							<div class="img-inner" style="background-image:url('./../optimised/tie/5.jpg');"></div>
+						</div>
+						<span class="strip__item-number"><a class="strip__item-link"><span>Expand</span></a>
+					</div>
+					<div class="strip__item">
+						<div class="img-outer img-outer--size-xl">
+							<div class="img-inner" style="background-image:url('./../optimised/tie/6.jpg');"></div>
+						</div>
+						<span class="strip__item-number"><a class="strip__item-link"><span>Expand</span></a>
+					</div>
+					<div class="strip__item">
+						<div class="img-outer img-outer--size-xl">
+							<div class="img-inner" style="background-image:url('./../optimised/tie/7.jpg');"></div>
+						</div>
+						<span class="strip__item-number"><a class="strip__item-link"><span>Expand</span></a>
+					</div>
+					<div class="strip__item">
+						<div class="img-outer img-outer--size-xl">
+							<div class="img-inner" style="background-image:url('./../optimised/tie/8.jpg');"></div>
+						</div>
+						<span class="strip__item-number"><a class="strip__item-link"><span>Expand</span></a>
+					</div>
+					<div class="strip__item">
+						<div class="img-outer img-outer--size-xl">
+							<div class="img-inner" style="background-image:url('./../optimised/tie/9.jpg');"></div>
+						</div>
+						<span class="strip__item-number"><a class="strip__item-link"><span>Expand</span></a>
+					</div>
+					<div class="strip__item">
+						<div class="img-outer img-outer--size-xl">
+							<div class="img-inner" style="background-image:url('./../optimised/tie/10.jpg');"></div>
+						</div>
+						<span class="strip__item-number"><a class="strip__item-link"><span>Expand</span></a>
+					</div>
+					<div class="strip__item">
+						<div class="img-outer img-outer--size-xl">
+							<div class="img-inner" style="background-image:url('./../optimised/tie/11.jpg');"></div>
+						</div>
+						<span class="strip__item-number"><a class="strip__item-link"><span>Expand</span></a>
+					</div>
+					<div class="strip__item">
+						<div class="img-outer img-outer--size-xl">
+							<div class="img-inner" style="background-image:url('./../optimised/tie/12.jpg');"></div>
+						</div>
+						<span class="strip__item-number"><a class="strip__item-link"><span>Expand</span></a>
+					</div>
+					<div class="strip__item">
+						<div class="img-outer img-outer--size-xl">
+							<div class="img-inner" style="background-image:url('./../optimised/tie/13.jpg');"></div>
+						</div>
+						<span class="strip__item-number"><a class="strip__item-link"><span>Expand</span></a>
+					</div>
+					<div class="strip__item">
+						<div class="img-outer img-outer--size-xl">
+							<div class="img-inner" style="background-image:url('./../optimised/tie/14.jpg');"></div>
+						</div>
+						<span class="strip__item-number"><a class="strip__item-link"><span>Expand</span></a>
+					</div>
+					<div class="strip__item">
+						<div class="img-outer img-outer--size-xl">
+							<div class="img-inner" style="background-image:url('./../optimised/tie/15.jpg');"></div>
+						</div>
+						<span class="strip__item-number"><a class="strip__item-link"><span>Expand</span></a>
+					</div>
+					<div class="strip__item">
+						<div class="img-outer img-outer--size-xl">
+							<div class="img-inner" style="background-image:url('./../optimised/tie/16.jpg');"></div>
+						</div>
+						<span class="strip__item-number"><a class="strip__item-link"><span>Expand</span></a>
+					</div>
+					<div class="strip__item">
+						<div class="img-outer img-outer--size-xl">
+							<div class="img-inner" style="background-image:url('./../optimised/tie/17.jpg');"></div>
+						</div>
+						<span class="strip__item-number"><a class="strip__item-link"><span>Expand</span></a>
+					</div>
+					<div class="strip__item">
+						<div class="img-outer img-outer--size-xl">
+							<div class="img-inner" style="background-image:url('./../optimised/tie/18.jpg');"></div>
+						</div>
+						<span class="strip__item-number"><a class="strip__item-link"><span>Expand</span></a>
+					</div>
+					<div class="strip__item">
+						<div class="img-outer img-outer--size-xl">
+							<div class="img-inner" style="background-image:url('./../optimised/tie/19.jpg');"></div>
+						</div>
+						<span class="strip__item-number"><a class="strip__item-link"><span>Expand</span></a>
+					</div>
+					<div class="strip__item">
+						<div class="img-outer img-outer--size-xl">
+							<div class="img-inner" style="background-image:url('./../optimised/tie/20.jpg');"></div>
+						</div>
+						<span class="strip__item-number"><a class="strip__item-link"><span>Expand</span></a>
+					</div>
+					<div class="strip__item">
+						<div class="img-outer img-outer--size-xl">
+							<div class="img-inner" style="background-image:url('./../optimised/tie/21.jpg');"></div>
+						</div>
+						<span class="strip__item-number"><a class="strip__item-link"><span>Expand</span></a>
+					</div>
+					<div class="strip__item">
+						<div class="img-outer img-outer--size-xl">
+							<div class="img-inner" style="background-image:url('./../optimised/tie/22.jpg');"></div>
+						</div>
+						<span class="strip__item-number"><a class="strip__item-link"><span>Expand</span></a>
+					</div>
+					<div class="strip__item">
+						<div class="img-outer img-outer--size-xl">
+							<div class="img-inner" style="background-image:url('./../optimised/tie/23.jpg');"></div>
+						</div>
+						<span class="strip__item-number"><a class="strip__item-link"><span>Expand</span></a>
+					</div>
+					<div class="strip__item">
+						<div class="img-outer img-outer--size-xl">
+							<div class="img-inner" style="background-image:url('./../optimised/tie/24.jpg');"></div>
+						</div>
+						<span class="strip__item-number"><a class="strip__item-link"><span>Expand</span></a>
+					</div>
+					<div class="strip__item">
+						<div class="img-outer img-outer--size-xl">
+							<div class="img-inner" style="background-image:url('./../optimised/tie/25.jpg');"></div>
+						</div>
+						<span class="strip__item-number"><a class="strip__item-link"><span>Expand</span></a>
+					</div>
+					<div class="strip__item">
+						<div class="img-outer img-outer--size-xl">
+							<div class="img-inner" style="background-image:url('./../optimised/tie/26.jpg');"></div>
+						</div>
+						<span class="strip__item-number"><a class="strip__item-link"><span>Expand</span></a>
+					</div>
+					<div class="strip__item">
+						<div class="img-outer img-outer--size-xl">
+							<div class="img-inner" style="background-image:url('./../optimised/tie/27.jpg');"></div>
+						</div>
+						<span class="strip__item-number"><a class="strip__item-link"><span>Expand</span></a>
+					</div>
+					<div class="strip__item">
+						<div class="img-outer img-outer--size-xl">
+							<div class="img-inner" style="background-image:url('./../optimised/tie/28.jpg');"></div>
+						</div>
+						<span class="strip__item-number"><a class="strip__item-link"><span>Expand</span></a>
+					</div>
+					<div class="strip__item">
+						<div class="img-outer img-outer--size-xl">
+							<div class="img-inner" style="background-image:url('./../optimised/tie/29.jpg');"></div>
+						</div>
+						<span class="strip__item-number"><a class="strip__item-link"><span>Expand</span></a>
+					</div>
+					<div class="strip__item">
+						<div class="img-outer img-outer--size-xl">
+							<div class="img-inner" style="background-image:url('./../optimised/tie/30.jpg');"></div>
+						</div>
+						<span class="strip__item-number"><a class="strip__item-link"><span>Expand</span></a>
+					</div>
+					<div class="strip__item">
+						<div class="img-outer img-outer--size-xl">
+							<div class="img-inner" style="background-image:url('./../optimised/tie/31.jpg');"></div>
+						</div>
+						<span class="strip__item-number"><a class="strip__item-link"><span>Expand</span></a>
+					</div>
+					<div class="strip__item">
+						<div class="img-outer img-outer--size-xl">
+							<div class="img-inner" style="background-image:url('./../optimised/tie/32.jpg');"></div>
+						</div>
+						<span class="strip__item-number"><a class="strip__item-link"><span>Expand</span></a>
+					</div>
+					<div class="strip__item">
+						<div class="img-outer img-outer--size-xl">
+							<div class="img-inner" style="background-image:url('./../optimised/tie/33.jpg');"></div>
+						</div>
+						<span class="strip__item-number"><a class="strip__item-link"><span>Expand</span></a>
+					</div>
+					<div class="strip__item">
+						<div class="img-outer img-outer--size-xl">
+							<div class="img-inner" style="background-image:url('./../optimised/tie/34.jpg');"></div>
+						</div>
+						<span class="strip__item-number"><a class="strip__item-link"><span>Expand</span></a>
+					</div>
+					<div class="strip__item">
+						<div class="img-outer img-outer--size-xl">
+							<div class="img-inner" style="background-image:url('./../optimised/tie/35.jpg');"></div>
+						</div>
+						<span class="strip__item-number"><a class="strip__item-link"><span>Expand</span></a>
+					</div>
+					<div class="strip__item">
+						<div class="img-outer img-outer--size-xl">
+							<div class="img-inner" style="background-image:url('./../optimised/tie/36.jpg');"></div>
+						</div>
+						<span class="strip__item-number"><a class="strip__item-link"><span>Expand</span></a>
+					</div>
+					<div class="strip__item">
+						<div class="img-outer img-outer--size-xl">
+							<div class="img-inner" style="background-image:url('./../optimised/tie/37.jpg');"></div>
+						</div>
+						<span class="strip__item-number"><a class="strip__item-link"><span>Expand</span></a>
+					</div>
+				</div>
+				<!--/strip-->
+			</div>
+			<!--/strip-inner-->
+			<div class="strip-cover">
+			</div>
+		</div>
+		<!--/strip-outer-->
+		<div class="content">
+			<article class="content__item">
+				<div class="img-outer img-outer--content">
+					<div class="img-inner img-inner--content" style="background-image: url(./../images/tie/1.jpg);">
+					</div>
+				</div>
+				<div class="content__item-copy">
+					<h2 class="content__item-title">Title</h2>
+					<p class="content__item-text">price here</p>
+				</div>
+			</article>
+			<article class="content__item">
+				<div class="img-outer img-outer--content">
+					<div class="img-inner img-inner--content" style="background-image: url(./../images/tie/2.jpg);">
+					</div>
+				</div>
+				<div class="content__item-copy">
+					<h2 class="content__item-title">Title</h2>
+					<p class="content__item-text">price here</p>
+				</div>
+			</article>
+			<article class="content__item">
+				<div class="img-outer img-outer--content">
+					<div class="img-inner img-inner--content" style="background-image: url(./../images/tie/3.jpg);">
+					</div>
+				</div>
+				<div class="content__item-copy">
+					<h2 class="content__item-title">Title</h2>
+					<p class="content__item-text">price here</p>
+				</div>
+			</article>
+			<article class="content__item">
+				<div class="img-outer img-outer--content">
+					<div class="img-inner img-inner--content" style="background-image: url(./../images/tie/4.jpg);">
+					</div>
+				</div>
+				<div class="content__item-copy">
+					<h2 class="content__item-title">Title</h2>
+					<p class="content__item-text">price here</p>
+				</div>
+			</article>
+			<article class="content__item">
+				<div class="img-outer img-outer--content">
+					<div class="img-inner img-inner--content" style="background-image: url(./../images/tie/5.jpg);">
+					</div>
+				</div>
+				<div class="content__item-copy">
+					<h2 class="content__item-title">Title</h2>
+					<p class="content__item-text">price here</p>
+				</div>
+			</article>
+			<article class="content__item">
+				<div class="img-outer img-outer--content">
+					<div class="img-inner img-inner--content" style="background-image: url(./../images/tie/6.jpg);">
+					</div>
+				</div>
+				<div class="content__item-copy">
+					<h2 class="content__item-title">Title</h2>
+					<p class="content__item-text">price here</p>
+				</div>
+			</article>
+			<article class="content__item">
+				<div class="img-outer img-outer--content">
+					<div class="img-inner img-inner--content" style="background-image: url(./../images/tie/7.jpg);">
+					</div>
+				</div>
+				<div class="content__item-copy">
+					<h2 class="content__item-title">Title</h2>
+					<p class="content__item-text">price here</p>
+				</div>
+			</article>
+			<article class="content__item">
+				<div class="img-outer img-outer--content">
+					<div class="img-inner img-inner--content" style="background-image: url(./../images/tie/8.jpg);">
+					</div>
+				</div>
+				<div class="content__item-copy">
+					<h2 class="content__item-title">Title</h2>
+					<p class="content__item-text">price here</p>
+				</div>
+			</article>
+			<article class="content__item">
+				<div class="img-outer img-outer--content">
+					<div class="img-inner img-inner--content" style="background-image: url(./../images/tie/9.jpg);">
+					</div>
+				</div>
+				<div class="content__item-copy">
+					<h2 class="content__item-title">Title</h2>
+					<p class="content__item-text">price here</p>
+				</div>
+			</article>
+			<article class="content__item">
+				<div class="img-outer img-outer--content">
+					<div class="img-inner img-inner--content" style="background-image: url(./../images/tie/10.jpg);">
+					</div>
+				</div>
+				<div class="content__item-copy">
+					<h2 class="content__item-title">Title</h2>
+					<p class="content__item-text">price here</p>
+				</div>
+			</article>
+			<article class="content__item">
+				<div class="img-outer img-outer--content">
+					<div class="img-inner img-inner--content" style="background-image: url(./../images/tie/11.jpg);">
+					</div>
+				</div>
+				<div class="content__item-copy">
+					<h2 class="content__item-title">Title</h2>
+					<p class="content__item-text">price here</p>
+				</div>
+			</article>
+			<article class="content__item">
+				<div class="img-outer img-outer--content">
+					<div class="img-inner img-inner--content" style="background-image: url(./../images/tie/12.jpg);">
+					</div>
+				</div>
+				<div class="content__item-copy">
+					<h2 class="content__item-title">Title</h2>
+					<p class="content__item-text">price here</p>
+				</div>
+			</article>
+			<article class="content__item">
+				<div class="img-outer img-outer--content">
+					<div class="img-inner img-inner--content" style="background-image: url(./../images/tie/13.jpg);">
+					</div>
+				</div>
+				<div class="content__item-copy">
+					<h2 class="content__item-title">Title</h2>
+					<p class="content__item-text">price here</p>
+				</div>
+			</article>
+			<article class="content__item">
+				<div class="img-outer img-outer--content">
+					<div class="img-inner img-inner--content" style="background-image: url(./../images/tie/14.jpg);">
+					</div>
+				</div>
+				<div class="content__item-copy">
+					<h2 class="content__item-title">Title</h2>
+					<p class="content__item-text">price here</p>
+				</div>
+			</article>
+			<article class="content__item">
+				<div class="img-outer img-outer--content">
+					<div class="img-inner img-inner--content" style="background-image: url(./../images/tie/15.jpg);">
+					</div>
+				</div>
+				<div class="content__item-copy">
+					<h2 class="content__item-title">Title</h2>
+					<p class="content__item-text">price here</p>
+				</div>
+			</article>
+			<article class="content__item">
+				<div class="img-outer img-outer--content">
+					<div class="img-inner img-inner--content" style="background-image: url(./../images/tie/16.jpg);">
+					</div>
+				</div>
+				<div class="content__item-copy">
+					<h2 class="content__item-title">Title</h2>
+					<p class="content__item-text">price here</p>
+				</div>
+			</article>
+			<article class="content__item">
+				<div class="img-outer img-outer--content">
+					<div class="img-inner img-inner--content" style="background-image: url(./../images/tie/17.jpg);">
+					</div>
+				</div>
+				<div class="content__item-copy">
+					<h2 class="content__item-title">Title</h2>
+					<p class="content__item-text">price here</p>
+				</div>
+			</article>
+			<article class="content__item">
+				<div class="img-outer img-outer--content">
+					<div class="img-inner img-inner--content" style="background-image: url(./../images/tie/18.jpg);">
+					</div>
+				</div>
+				<div class="content__item-copy">
+					<h2 class="content__item-title">Title</h2>
+					<p class="content__item-text">price here</p>
+				</div>
+			</article>
+			<article class="content__item">
+				<div class="img-outer img-outer--content">
+					<div class="img-inner img-inner--content" style="background-image: url(./../images/tie/19.jpg);">
+					</div>
+				</div>
+				<div class="content__item-copy">
+					<h2 class="content__item-title">Title</h2>
+					<p class="content__item-text">price here</p>
+				</div>
+			</article>
+			<article class="content__item">
+				<div class="img-outer img-outer--content">
+					<div class="img-inner img-inner--content" style="background-image: url(./../images/tie/20.jpg);">
+					</div>
+				</div>
+				<div class="content__item-copy">
+					<h2 class="content__item-title">Title</h2>
+					<p class="content__item-text">price here</p>
+				</div>
+			</article>
+			<article class="content__item">
+				<div class="img-outer img-outer--content">
+					<div class="img-inner img-inner--content" style="background-image: url(./../images/tie/21.jpg);">
+					</div>
+				</div>
+				<div class="content__item-copy">
+					<h2 class="content__item-title">Title</h2>
+					<p class="content__item-text">price here</p>
+				</div>
+			</article>
+			<article class="content__item">
+				<div class="img-outer img-outer--content">
+					<div class="img-inner img-inner--content" style="background-image: url(./../images/tie/22.jpg);">
+					</div>
+				</div>
+				<div class="content__item-copy">
+					<h2 class="content__item-title">Title</h2>
+					<p class="content__item-text">price here</p>
+				</div>
+			</article>
+			<article class="content__item">
+				<div class="img-outer img-outer--content">
+					<div class="img-inner img-inner--content" style="background-image: url(./../images/tie/23.jpg);">
+					</div>
+				</div>
+				<div class="content__item-copy">
+					<h2 class="content__item-title">Title</h2>
+					<p class="content__item-text">price here</p>
+				</div>
+			</article>
+			<article class="content__item">
+				<div class="img-outer img-outer--content">
+					<div class="img-inner img-inner--content" style="background-image: url(./../images/tie/24.jpg);">
+					</div>
+				</div>
+				<div class="content__item-copy">
+					<h2 class="content__item-title">Title</h2>
+					<p class="content__item-text">price here</p>
+				</div>
+			</article>
+			<article class="content__item">
+				<div class="img-outer img-outer--content">
+					<div class="img-inner img-inner--content" style="background-image: url(./../images/tie/25.jpg);">
+					</div>
+				</div>
+				<div class="content__item-copy">
+					<h2 class="content__item-title">Title</h2>
+					<p class="content__item-text">price here</p>
+				</div>
+			</article>
+			<article class="content__item">
+				<div class="img-outer img-outer--content">
+					<div class="img-inner img-inner--content" style="background-image: url(./../images/tie/26.jpg);">
+					</div>
+				</div>
+				<div class="content__item-copy">
+					<h2 class="content__item-title">Title</h2>
+					<p class="content__item-text">price here</p>
+				</div>
+			</article>
+			<article class="content__item">
+				<div class="img-outer img-outer--content">
+					<div class="img-inner img-inner--content" style="background-image: url(./../images/tie/27.jpg);">
+					</div>
+				</div>
+				<div class="content__item-copy">
+					<h2 class="content__item-title">Title</h2>
+					<p class="content__item-text">price here</p>
+				</div>
+			</article>
+			<article class="content__item">
+				<div class="img-outer img-outer--content">
+					<div class="img-inner img-inner--content" style="background-image: url(./../images/tie/28.jpg);">
+					</div>
+				</div>
+				<div class="content__item-copy">
+					<h2 class="content__item-title">Title</h2>
+					<p class="content__item-text">price here</p>
+				</div>
+			</article>
+			<article class="content__item">
+				<div class="img-outer img-outer--content">
+					<div class="img-inner img-inner--content" style="background-image: url(./../images/tie/29.jpg);">
+					</div>
+				</div>
+				<div class="content__item-copy">
+					<h2 class="content__item-title">Title</h2>
+					<p class="content__item-text">price here</p>
+				</div>
+			</article>
+			<article class="content__item">
+				<div class="img-outer img-outer--content">
+					<div class="img-inner img-inner--content" style="background-image: url(./../images/tie/30.jpg);">
+					</div>
+				</div>
+				<div class="content__item-copy">
+					<h2 class="content__item-title">Title</h2>
+					<p class="content__item-text">price here</p>
+				</div>
+			</article>
+			<article class="content__item">
+				<div class="img-outer img-outer--content">
+					<div class="img-inner img-inner--content" style="background-image: url(./../images/tie/31.jpg);">
+					</div>
+				</div>
+				<div class="content__item-copy">
+					<h2 class="content__item-title">Title</h2>
+					<p class="content__item-text">price here</p>
+				</div>
+			</article>
+			<article class="content__item">
+				<div class="img-outer img-outer--content">
+					<div class="img-inner img-inner--content" style="background-image: url(./../images/tie/32.jpg);">
+					</div>
+				</div>
+				<div class="content__item-copy">
+					<h2 class="content__item-title">Title</h2>
+					<p class="content__item-text">price here</p>
+				</div>
+			</article>
+			<article class="content__item">
+				<div class="img-outer img-outer--content">
+					<div class="img-inner img-inner--content" style="background-image: url(./../images/tie/33.jpg);">
+					</div>
+				</div>
+				<div class="content__item-copy">
+					<h2 class="content__item-title">Title</h2>
+					<p class="content__item-text">price here</p>
+				</div>
+			</article>
+			<article class="content__item">
+				<div class="img-outer img-outer--content">
+					<div class="img-inner img-inner--content" style="background-image: url(./../images/tie/34.jpg);">
+					</div>
+				</div>
+				<div class="content__item-copy">
+					<h2 class="content__item-title">Title</h2>
+					<p class="content__item-text">price here</p>
+				</div>
+			</article>
+			<article class="content__item">
+				<div class="img-outer img-outer--content">
+					<div class="img-inner img-inner--content" style="background-image: url(./../images/tie/35.jpg);">
+					</div>
+				</div>
+				<div class="content__item-copy">
+					<h2 class="content__item-title">Title</h2>
+					<p class="content__item-text">price here</p>
+				</div>
+			</article>
+			<article class="content__item">
+				<div class="img-outer img-outer--content">
+					<div class="img-inner img-inner--content" style="background-image: url(./../images/tie/36.jpg);">
+					</div>
+				</div>
+				<div class="content__item-copy">
+					<h2 class="content__item-title">Title</h2>
+					<p class="content__item-text">price here</p>
+				</div>
+			</article>
+			<article class="content__item">
+				<div class="img-outer img-outer--content">
+					<div class="img-inner img-inner--content" style="background-image: url(./../images/tie/37.jpg);">
+					</div>
+				</div>
+				<div class="content__item-copy">
+					<h2 class="content__item-title">Title</h2>
+					<p class="content__item-text">price here</p>
+				</div>
+			</article>
+			<button class="content__close" aria-label="Close content"><svg width="12" height="26" viewBox="0 0 12 26">
+					<path
+						d="M5.293 25H5v-.293l-5-5L.707 19 5 23.293V0h1v23.657L10.657 19l.707.707-5.657 5.657-.025-.025-.025.025L5.293 25z" />
+				</svg></svg></button>
+		</div>
+	</main>
+	<div class="cursor">
+		<div class="cursor__inner cursor__inner--circle">
+			<div class="cursor__side cursor__side--left"></div>
+			<div class="cursor__side cursor__side--right"></div>
+		</div>
+	</div>
+	<script src="js/imagesloaded.pkgd.min.js"></script>
+	<script src="js/TweenMax.min.js"></script>
+	<script src="js/draggabilly.pkgd.min.js"></script>
+	<script src="js/demo.js"></script>
+	<script>
+		imagesLoaded(document.querySelectorAll('.img-inner'), { background: true }, () => document.body.classList.remove('loading'));
+	</script>
+</body>
+
+</html>
